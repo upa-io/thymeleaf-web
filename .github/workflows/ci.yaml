@@ -16,6 +16,15 @@ jobs:
           distribution: 'temurin'
           java-version: '23'
           check-latest: true
+      - name: Cache Gradle packages
+        uses: actions/cache@v4.2.0
+        with:
+            path: |
+                ~/.gradle/caches
+                ~/.gradle/wrapper
+            key: ${{ runner.os }}-gradle-${{ hashFiles('**/*.gradle*', '**/gradle-wrapper.properties') }}
+            restore-keys: |
+                ${{ runner.os }}-gradle-
       - name: Run Gradle Tests
         run: ./gradlew test
       - name: Set up Docker Buildx
