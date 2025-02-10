@@ -1,6 +1,14 @@
 # Getting Started
 
-### Reference Documentation
+To build an Native image of the application, you can use the following command:
+
+```sh
+./gradlew bootBuildImage
+```
+
+This command will create a Docker image of your Spring Boot application, which can be run in any OCI-compliant container runtime.
+
+## Reference Documentation
 
 For further reference, please consider the following sections:
 
@@ -11,7 +19,7 @@ For further reference, please consider the following sections:
 * [Thymeleaf](https://docs.spring.io/spring-boot/3.4.2/reference/web/servlet.html#web.servlet.spring-mvc.template-engines)
 * [Spring Web](https://docs.spring.io/spring-boot/3.4.2/reference/web/servlet.html)
 
-### Guides
+## Guides
 
 The following guides illustrate how to use some features concretely:
 
@@ -21,9 +29,8 @@ The following guides illustrate how to use some features concretely:
 * [Serving Web Content with Spring MVC](https://spring.io/guides/gs/serving-web-content/)
 * [Building REST services with Spring](https://spring.io/guides/tutorials/rest/)
 
-### Additional Links
+## Additional Links
 
 These additional references should also help you:
 
 * [Gradle Build Scans – insights for your project's build](https://scans.gradle.com#gradle)
-
